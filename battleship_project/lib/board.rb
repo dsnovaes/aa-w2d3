@@ -23,9 +23,7 @@ class Board
     end
 
     def num_ships
-        result = Hash.new(0)
-        @grid.flatten.each { |k,v| result[k] += 1 }
-        result[:S]
+        @grid.flatten.count { |ele| ele == :S }
     end
 
     def attack(position)
