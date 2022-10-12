@@ -7,6 +7,13 @@ class Board
         @size = n*n
     end
 
+    def self.print_grid(arr)
+        arr.each do |subArr|
+            puts subArr.join(" ")
+        end
+
+    end
+
     def [](position)
         @grid[position.first][position.last]
     end
@@ -54,8 +61,12 @@ class Board
         end
     end
 
-    def print_grid(arr)
-        
+    def cheat
+        Board.print_grid(@grid)
+    end
+
+    def print
+        Board.print_grid(hidden_ships_grid)
     end
 
 end
