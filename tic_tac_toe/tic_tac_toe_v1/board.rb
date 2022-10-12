@@ -89,14 +89,14 @@ class Board
 
 end
 
-g = Board.new
-g.place_mark([1,1],:X)
-p g.empty_positions?
-g.place_mark([0,1],:O)
-p g.empty_positions?
-g.place_mark([0,2],:X)
-p g.empty_positions?
-g.place_mark([1,0],:X)
-g.print
-p g.win?(:X)
-p g.empty_positions?
+# g = Board.new
+# g.place_mark([1,1],:X)
+# p g.empty_positions?
+# g.place_mark([0,1],:O)
+# p g.empty_positions?
+# g.place_mark([0,2],:X)
+# p g.empty_positions?
+# g.place_mark([1,0],:X)
+# g.print
+# p g.win?(:X)
+# p g.empty_positions?
