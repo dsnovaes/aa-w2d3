@@ -1,6 +1,3 @@
-# require "game.rb"
-# require "human_player.rb"
-
 class Board
 
 
@@ -51,12 +48,12 @@ class Board
     end
 
     def win_row?(mark)
-        @board.each { |row| return true if row.count(mark) == 2 && row.count("_") == 1 }
+        @board.each { |row| return true if row.count(mark) == 3 && row.count("_") == 0 }
         false
     end
 
     def win_col?(mark)
-        @board.transpose.each { |col| return true if col.count(mark) == 2 && col.count("_") == 1 }
+        @board.transpose.each { |col| return true if col.count(mark) == 3 && col.count("_") == 0 }
         false
     end
 
@@ -67,7 +64,7 @@ class Board
             diagonal1 << @board[i][i]
             diagonal2 << @board[i][@board.length - i - 1]
         end
-        if (diagonal1.count(mark) == 2 || diagonal2.count(mark) == 2) && (diagonal1.count("_") == 1 || diagonal2.count("_") == 1)
+        if (diagonal1.count(mark) == 3 || diagonal2.count(mark) == 3) && (diagonal1.count("_") == 0 || diagonal2.count("_") == 0)
             return true 
         else
             false
