@@ -64,7 +64,7 @@ class Board
             diagonal1 << @board[i][i]
             diagonal2 << @board[i][@board.length - i - 1]
         end
-        if (diagonal1.count(mark) == 3 || diagonal2.count(mark) == 3) && (diagonal1.count("_") == 0 || diagonal2.count("_") == 0)
+        if diagonal1.count(mark) == 3 || diagonal2.count(mark) == 3
             return true 
         else
             false
