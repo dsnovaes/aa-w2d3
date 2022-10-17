@@ -11,7 +11,6 @@ class Board
         arr.each do |subArr|
             puts subArr.join(" ")
         end
-
     end
 
     def [](position)
